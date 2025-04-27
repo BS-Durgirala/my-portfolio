@@ -6,12 +6,7 @@
   <title>Durgirala Bharathi Sudha | Data Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to right, #fdfbfb, #ebedee);
@@ -29,8 +24,8 @@
       padding: 2rem;
     }
     header img {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       margin-bottom: 1rem;
     }
@@ -59,9 +54,7 @@
       color: #00796b;
       transition: 0.3s;
     }
-    nav a:hover {
-      color: #004d40;
-    }
+    nav a:hover { color: #004d40; }
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
@@ -84,9 +77,7 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.05);
       transition: transform 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-5px);
-    }
+    .card:hover { transform: translateY(-5px); }
     .card h3 {
       font-size: 1.1rem;
       color: #004d40;
@@ -115,11 +106,12 @@
       font-weight: 500;
       color: #00695c;
     }
-    .cta {
+    .cta, footer {
       text-align: center;
       margin-top: 3rem;
+      padding: 2rem;
     }
-    .cta a {
+    .cta a, footer a {
       background: #00796b;
       color: white;
       padding: 12px 20px;
@@ -127,26 +119,28 @@
       border-radius: 8px;
       font-weight: 600;
     }
+    footer p { margin-top: 1rem; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <header>
     <img src="profile.png" alt="Profile">
     <h1>Durgirala Bharathi Sudha</h1>
-    <p>Data Analyst • Python • SQL • Power BI • Excel Automation</p>
+    <p>Data Analyst</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
     <a href="#skills">Skills</a>
-    <a href="resume.pdf" download>Resume</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a data analyst passionate about converting real-world problems into actionable data stories. With a Master’s degree in Data Analytics & Information Systems and certifications in Power BI, AWS, and Google Analytics, I bring a powerful combination of business context and technical depth.</p>
+    <p>I am a detail-oriented data analyst passionate about solving real-world problems through data-driven decision-making. With a Master's degree in Data Analytics & Information Systems from Texas State University (expected May 2025) and strong hands-on experience across tools like Python, SQL, Power BI, and Excel, I help organizations turn raw data into clear insights. I have worked with global teams at Accenture and Sutherland, streamlining data workflows and automating dashboards. As a Graduate Assistant, I handled 10,000+ financial records with 99% accuracy and built reporting pipelines that improved decision speed. I’m also certified in AWS Cloud, Power BI, and Google Analytics. My goal is to contribute to data-focused teams where business impact meets technical precision.</p>
   </section>
 
   <section id="experience">
@@ -155,17 +149,17 @@
       <div class="card">
         <h3>Graduate Assistant - Internal Funding Specialist</h3>
         <small>Texas State University · May 2024 – Present</small>
-        <p>Automated dashboards and analyzed 10K+ funding records using Python, Excel, and Power BI.</p>
+        <p>Managed 10K+ scholarship records, automated reporting, improved accuracy using Python and Power BI.</p>
       </div>
       <div class="card">
         <h3>Customer Insights Analyst</h3>
         <small>Sutherland Global · Mar 2023 – Jul 2023</small>
-        <p>Monitored 200+ weekly inquiries using SQL and automated trend reports with Excel Macros.</p>
+        <p>Analyzed support data using SQL, automated Excel reports, improved service efficiency by 15%.</p>
       </div>
       <div class="card">
         <h3>Junior Data Analyst</h3>
         <small>Accenture · Oct 2021 – Nov 2022</small>
-        <p>Developed Power BI dashboards, streamlined SQL logic, and integrated SharePoint data flows.</p>
+        <p>Developed dashboards with Power BI, optimized queries, integrated pipelines across departments.</p>
       </div>
     </div>
   </section>
@@ -174,10 +168,27 @@
     <h2>Projects</h2>
     <div class="cards">
       <div class="card">
-        <h3>Job Market Trends (2025)</h3>
-        <small>Real dataset • JSON • Python</small>
-        <p>Analyzed 60K+ job listings from 2025 to identify hiring trends, skill demands, and remote work growth.</p>
+        <h3>📊 Job Market Trends (2025)</h3>
+        <small>Python, JSON, Seaborn</small>
+        <p>Analyzed 60K+ job listings to uncover hiring trends, in-demand skills, work locations, and salary patterns using real-time scraped JSON data. Created interactive visualizations and summaries.</p>
         <p><a href="https://github.com/BS-Durgirala/my-portfolio/blob/main/notebooks/P1_Jobs_Market_Trends_2025.ipynb" target="_blank">🔗 View Notebook</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>M.S. in Data Analytics & Information Systems</h3>
+        <small>Texas State University · GPA: 3.89 · Expected May 2025</small>
+        <p>TXST Graduate Merit Fellowship Award 2023–24</p>
+      </div>
+      <div class="card">
+        <h3>Certifications</h3>
+        <p>• Microsoft Certified: Power BI Analyst Associate (Apr 2025)<br>
+        • AWS Certified Cloud Practitioner (Apr 2025)<br>
+        • Google Data Analytics Professional (Mar 2025)</p>
       </div>
     </div>
   </section>
@@ -202,8 +213,10 @@
     </div>
   </section>
 
-  <section class="cta">
+  <footer id="contact">
+    <a href="mailto:bsmg2402@gmail.com">📧 bsmg2402@gmail.com</a>
+    <p><a href="https://www.linkedin.com/in/dbsudha" target="_blank">🔗 LinkedIn</a></p>
     <a href="resume.pdf" download>📄 Download My Resume</a>
-  </section>
+  </footer>
 </body>
 </html>
