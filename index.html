@@ -50,6 +50,21 @@
     .btn:hover {
       background-color: #004d40;
     }
+    .project {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      margin-top: 3rem;
+      text-align: left;
+    }
+    .project h2 {
+      color: #00695c;
+    }
+    .project a {
+      color: #00695c;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -60,6 +75,25 @@
       This site is currently under development and will soon feature a collection of real-world data analytics projects, interactive dashboards, and insights showcasing my skills in Python, SQL, Power BI, and more. Stay tuned!
     </p>
     <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
+
+    <div class="project">
+      <h2>📊 Job Market Trends (2025)</h2>
+      <p><strong>Objective:</strong> Analyze 60K+ job listings to extract insights about top job roles, hiring companies, work types, skills, and salary trends.</p>
+      <p><strong>Skills:</strong> Python, Pandas, Seaborn, JSON flattening, NLP, EDA</p>
+      <p><strong>Key Questions Answered:</strong>
+        <ul>
+          <li>Top job titles in demand</li>
+          <li>Top companies hiring</li>
+          <li>Remote vs hybrid vs on-site roles</li>
+          <li>Most mentioned skills in job descriptions</li>
+          <li>Salary distribution across jobs</li>
+        </ul>
+      </p>
+      <p><strong>Results Summary:</strong><br>
+      Data Analyst, Python, SQL & Remote roles topped the list. Most jobs had salaries ranging from $50K–$65K when available.</p>
+      <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/ghostjobs/january-2025-60k-jobs-indeed" target="_blank">January 2025 Indeed Listings (Kaggle)</a></p>
+      <p><strong>Notebook:</strong> <a href="https://github.com/BS-Durgirala/my-portfolio/blob/main/notebook/P1_Jobs_Market_Trends_2025.ipynb" target="_blank">View on GitHub</a></p>
+    </div>
   </div>
 </body>
 </html>
