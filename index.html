@@ -1,247 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Durgirala Bharathi Sudha | Data Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #fefcea, #f1f4f9);
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fefcea, #f1f4f9);
       color: #2c2c2c;
     }
     header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      padding: 2rem;
-      animation: fadeIn 1.2s ease;
+      padding: 4rem 2rem;
     }
     header img {
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      color: #00695c;
+      font-size: 2.5rem;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #2c2c2c;
     }
     header p {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: #555;
-      margin-top: 0.5rem;
     }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-      z-index: 999;
-    }
-    nav a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #00695c;
-      transition: 0.3s;
-    }
-    nav a:hover { color: #004d40; }
 
     section {
-      padding: 5rem 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    section.active {
-      opacity: 1;
-      transform: translateY(0);
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: auto;
     }
 
     h2 {
-      font-size: 2rem;
+      text-align: center;
+      color: #2c2c2c;
       margin-bottom: 2rem;
-      color: #004d40;
     }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
     }
+
     .card {
       background: white;
+      border-radius: 16px;
       padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      width: 280px;
+      text-align: center;
     }
-    .card:hover { transform: translateY(-6px); }
+
     .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
-      color: #00796b;
-    }
-    .card small {
-      font-size: 0.85rem;
-      color: #777;
-      display: block;
-      margin-bottom: 0.8rem;
-    }
-    .card p {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      color: #333;
+      color: #2c2c2c;
+      margin-bottom: 0.5rem;
     }
 
     .skills {
+      text-align: center;
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
     }
-    .skill {
-      background: #e0f2f1;
-      padding: 8px 14px;
+
+    .skill-tag {
+      background: #e0f7fa;
+      padding: 8px 16px;
       border-radius: 20px;
+      color: #00796b;
+      font-weight: 600;
       font-size: 0.9rem;
-      font-weight: 500;
-      color: #00695c;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .project-card h3 {
+      margin-bottom: 1rem;
+      color: #2c2c2c;
+    }
+
+    .project-card p {
+      margin-bottom: 0.75rem;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background: #00796b;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      font-size: 0.95rem;
+      padding: 2rem 1rem;
       background: none;
+      font-size: 0.95rem;
       color: #444;
-      line-height: 1.8;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #00796b;
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="profile.png" alt="Profile">
-    <h1>Durgirala Bharathi Sudha</h1>
-    <p>Data Analyst</p>
-  </header>
+<header>
+  <img src="profile.png" alt="Profile">
+  <h1>Durgirala Bharathi Sudha</h1>
+  <p>Data Analyst</p>
+</header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m Durgirala Bharathi Sudha, a passionate Data Analyst with strong academic grounding and hands-on experience across enterprise and academic environments. With an M.S. in Data Analytics & Information Systems from Texas State University, I specialize in transforming raw data into impactful business insights. My strengths lie in building interactive dashboards, automating processes with Python and SQL, and crafting scalable data workflows. I’ve applied my expertise in organizations like Accenture, Sutherland, and within the university, where I managed over 10,000 financial records with 99% accuracy. My core philosophy is to bridge data complexity with real-world clarity.</p>
-  </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Graduate Assistant - Internal Funding Specialist</h3>
-        <small>Texas State University · May 2024 – Present</small>
-        <p>Managed 10K+ scholarship records, automated reporting, improved accuracy using Python and Power BI.</p>
-      </div>
-      <div class="card">
-        <h3>Customer Insights Analyst</h3>
-        <small>Sutherland Global · Mar 2023 – Jul 2023</small>
-        <p>Analyzed support data using SQL, automated Excel reports, improved service efficiency by 15%.</p>
-      </div>
-      <div class="card">
-        <h3>Junior Data Analyst</h3>
-        <small>Accenture · Oct 2021 – Nov 2022</small>
-        <p>Developed dashboards with Power BI, optimized queries, integrated pipelines across departments.</p>
-      </div>
+<section>
+  <h2>Experience</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Graduate Assistant</h3>
+      <p><strong>Texas State University</strong></p>
+      <p>May 2024 – Present</p>
+      <p>Managing internal funding records and performing data validation</p>
     </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>📊 Job Market Trends (2025)</h3>
-        <small>Python, JSON, Pandas, Seaborn</small>
-        <p>This project involved analyzing over 60,000 job listings from a scraped JSON dataset of January 2025 job postings. I flattened nested job structures, extracted insights about the most common titles, top hiring companies, location types (remote/hybrid/on-site), frequently mentioned tech skills (via NLP), and salary ranges. Visualizations were created using Seaborn and Matplotlib to support story-driven analytics. This project helps job seekers and workforce strategists alike.</p>
-        <p><a href="https://github.com/BS-Durgirala/my-portfolio/blob/main/notebooks/P1_Jobs_Market_Trends_2025.ipynb" target="_blank">🔗 View Full Notebook</a></p>
-      </div>
+    <div class="card">
+      <h3>Customer Insights Analyst</h3>
+      <p><strong>Sutherland Global Services</strong></p>
+      <p>Mar 2023 – Jul 2023</p>
+      <p>Analyzed customer service inquiries to identify complaint trends</p>
     </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>M.S. in Data Analytics & Information Systems</h3>
-        <small>Texas State University · GPA: 3.89 · Expected May 2025</small>
-        <p>TXST Graduate Merit Fellowship Award 2023–24</p>
-      </div>
+    <div class="card">
+      <h3>Junior Data Analyst</h3>
+      <p><strong>Accenture</strong></p>
+      <p>Oct 2021 – Nov 2022</p>
+      <p>Developed interactive dashboards and optimized data models</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Python</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">Excel (VBA)</div>
-      <div class="skill">Tableau</div>
-      <div class="skill">Seaborn</div>
-      <div class="skill">Google BigQuery</div>
-      <div class="skill">DBT</div>
-      <div class="skill">Power Query</div>
-      <div class="skill">Airflow</div>
-      <div class="skill">AWS</div>
-      <div class="skill">Scikit-learn</div>
-    </div>
-  </section>
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">SQL</span>
+    <span class="skill-tag">Excel</span>
+    <span class="skill-tag">Power BI</span>
+    <span class="skill-tag">Tableau</span>
+    <span class="skill-tag">Google Sheets</span>
+    <span class="skill-tag">Looker</span>
+    <span class="skill-tag">Power Query</span>
+    <span class="skill-tag">DBT</span>
+    <span class="skill-tag">Airflow</span>
+    <span class="skill-tag">AWS</span>
+    <span class="skill-tag">BigQuery</span>
+    <span class="skill-tag">Scikit-learn</span>
+    <span class="skill-tag">TensorFlow</span>
+    <span class="skill-tag">MongoDB</span>
+    <span class="skill-tag">Spark</span>
+    <span class="skill-tag">VBA</span>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2>Certifications & Contact</h2>
-    <p>🎓 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185520754424391680/" target="_blank">Google Data Analytics Professional Certificate</a></p>
-    <p>Email: bsmg2402@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/dbsudha" target="_blank">linkedin.com/in/dbsudha</a></p>
-    <p>Resume: <a href="resume.pdf" target="_blank">Download PDF</a></p>
-  </section>
+<section>
+  <h2>Education</h2>
+  <div class="card">
+    <h3>Texas State University</h3>
+    <p>M.S. in Data Analytics & Information Systems</p>
+    <p>Expected May 2025 | GPA: 3.89</p>
+  </div>
+</section>
 
-  <script>
-    // Simple section scroll animation
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.15 });
+<section>
+  <h2>Certifications</h2>
+  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185520754424391680/" class="button-link" target="_blank">
+    Google Data Analytics Professional Certificate
+  </a>
+</section>
 
-    document.querySelectorAll('section').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
+<section>
+  <h2>Project: Job Market Trends (2025)</h2>
+  <div class="project-card">
+    <h3>📊 Job Market Trends (2025)</h3>
+    <p><strong>Objective:</strong> Analyze job listings from 2025 to uncover hiring trends and market insights</p>
+    <p><strong>Tools & Skills Used:</strong> Python, JSON, Pandas, Seaborn, Matplotlib</p>
+    <p><strong>Key Questions Answered:</strong></p>
+    <ul>
+      <li>What are the most common job titles?</li>
+      <li>Which companies are hiring most frequently?</li>
+      <li>What work modes dominate (Remote/Hybrid/On-Site)?</li>
+      <li>Which tech skills are most mentioned?</li>
+      <li>What do salary ranges look like?</li>
+    </ul>
+    <p><strong>Results Summary:</strong> Identified Data Analyst, BI Developer as top roles; CSM & IBM as top employers; Python & SQL most frequent skills</p>
+    <p><strong>Insights & Summary:</strong> Delivered clear visual insights for job seekers & hiring teams. Trends align with current tech demand.</p>
+    <p><strong>Data Source + Licensing:</strong> Kaggle open-source dataset from January 2025, sourced from Indeed</p>
+    <p><strong>Notebook:</strong> <a href="https://github.com/BS-Durgirala/my-portfolio/blob/main/notebooks/P1_Jobs_Market_Trends_2025.ipynb" target="_blank">View on GitHub</a></p>
+  </div>
+</section>
 
+<footer>
+  <p>📧 <a href="mailto:bsmg2402@gmail.com">bsmg2402@gmail.com</a></p>
+  <p>🔗 <a href="https://www.linkedin.com/in/dbsudha" target="_blank">LinkedIn</a></p>
+  <p>📄 <a href="resume.pdf" target="_blank">View Resume</a></p>
+</footer>
 </body>
 </html>
