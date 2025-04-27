@@ -3,171 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sudha's Data Analyst Portfolio</title>
+  <title>Durgirala Bharathi Sudha | Data Analyst Portfolio</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
-      color: #2c3e50;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e8f5f9, #fdfcfc);
+      color: #2e3d49;
     }
-    .container {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    }
-    .profile-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 1rem auto;
-    }
-    h1, h2 {
+    header {
       text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #004d40;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #e0f2f1;
+      padding-bottom: 0.5rem;
       color: #00695c;
     }
-    p, li {
-      color: #444;
-      font-size: 1rem;
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    .section {
-      margin-bottom: 2.5rem;
-    }
-    .experience-grid {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .experience-card {
-      flex: 1 1 280px;
-      background: #f9f9f9;
-      padding: 1rem;
+    .card {
+      background: #ffffff;
+      padding: 1rem 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
     }
-    .skill-buttons {
+    .card h3 {
+      margin: 0;
+      color: #00796b;
+    }
+    .card small {
+      display: block;
+      color: #888;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+    }
+    .skills {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 10px;
+      margin-top: 1rem;
     }
     .skill {
-      padding: 10px 16px;
+      background: #d6f5f2;
+      color: #004d40;
+      padding: 6px 14px;
       border-radius: 20px;
-      background-color: #e0f2f1;
-      color: #00695c;
-      font-weight: bold;
-      position: relative;
-      cursor: pointer;
-      transition: background 0.3s;
+      font-weight: 500;
+      font-size: 0.85rem;
     }
-    .skill:hover {
-      background-color: #b2dfdb;
-    }
-    .project {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-      margin-top: 3rem;
-      text-align: left;
-    }
-    .project h2 {
-      color: #00695c;
-    }
-    .project a {
-      color: #00695c;
-      font-weight: bold;
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
     }
     .btn {
       display: inline-block;
-      padding: 12px 18px;
-      background-color: #00695c;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 500;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       margin-top: 1rem;
-    }
-    .btn:hover {
-      background-color: #004d40;
+      padding: 10px 16px;
+      background-color: #00695c;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="profile.png" alt="Profile" class="profile-img" />
-    <h1>Sudha Durgirala</h1>
-    <p style="text-align: center;">Data Analyst | Problem Solver | Insight Translator</p>
+  <header>
+    <h1>Durgirala Bharathi Sudha</h1>
+    <p>Data Analyst | Python | SQL | Power BI | AWS | Excel Automation</p>
+  </header>
 
-    <div class="section">
-      <h2>About Me</h2>
-      <p>I recently earned my Master's in Data Analytics & Information Systems from Texas State University and am passionate about turning data into actionable insights. I bring a blend of analytical skills, storytelling, and dashboard design to every project I take on.</p>
-    </div>
-
-    <div class="section">
-      <h2>Experience</h2>
-      <div class="experience-grid">
-        <div class="experience-card">
-          <h3>Graduate Assistant – Texas State University</h3>
-          <p>Analyzed performance metrics for GradBulletin and improved content strategies.</p>
-        </div>
-        <div class="experience-card">
-          <h3>Web Content Assistant – Graduate College</h3>
-          <p>Worked with GATO CMS to structure and maintain academic site maps.</p>
-        </div>
-        <div class="experience-card">
-          <h3>Social Analytics Intern – Grad Communications</h3>
-          <p>Evaluated reach and engagement across Instagram, Twitter, Facebook, and LinkedIn.</p>
-        </div>
+  <section>
+    <h2>Experience</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Graduate Assistant - Internal Funding Specialist</h3>
+        <small>Texas State University, San Marcos, TX | May 2024 – Present</small>
+        <p>Managed and analyzed 10K+ scholarship records, automated reporting using Python & VBA, and built dashboards in Power BI.</p>
+      </div>
+      <div class="card">
+        <h3>Customer Insights Analyst</h3>
+        <small>Sutherland Global Services, Chennai, India | Mar 2023 – Jul 2023</small>
+        <p>Analyzed 200+ weekly inquiries using SQL & Excel, built automated service reports with Power Query & Macros.</p>
+      </div>
+      <div class="card">
+        <h3>Junior Data Analyst</h3>
+        <small>Accenture, Bengaluru, India | Oct 2021 – Nov 2022</small>
+        <p>Created 10+ Power BI dashboards, optimized SQL queries, and built automated ETL pipelines with Power Query & SharePoint.</p>
       </div>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <div class="skill-buttons">
-        <div class="skill" title="Data manipulation and analysis">Python (Pandas, Seaborn)</div>
-        <div class="skill" title="Data querying and transformation">SQL</div>
-        <div class="skill" title="Spreadsheet analysis">Excel</div>
-        <div class="skill" title="Dashboarding & BI tools">Power BI</div>
-        <div class="skill" title="Visualization & storytelling">Tableau</div>
-        <div class="skill" title="Data sourcing & integration">APIs / JSON</div>
-        <div class="skill" title="Code versioning & collaboration">GitHub</div>
-        <div class="skill" title="Browser-based coding">Google Colab</div>
+  <section>
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>MS in Data Analytics & Information Systems</h3>
+        <small>Texas State University | GPA: 3.89 | Expected May 2025</small>
+        <p>TXST Graduate Merit Fellowship Award 2023-24</p>
       </div>
     </div>
+  </section>
 
-    <div class="project">
-      <h2>📊 Job Market Trends (2025)</h2>
-      <p><strong>Objective:</strong> Analyze 60K+ job listings to extract insights about top job roles, hiring companies, work types, skills, and salary trends using real-world data.</p>
-      <p><strong>Skills:</strong> Python, Pandas, Seaborn, JSON flattening, NLP, EDA</p>
-      <p><strong>Key Questions Answered:</strong>
-        <ul>
-          <li>Top job titles in demand</li>
-          <li>Top companies hiring</li>
-          <li>Remote vs hybrid vs on-site roles</li>
-          <li>Most mentioned skills in job descriptions</li>
-          <li>Salary distribution across jobs</li>
-        </ul>
-      </p>
-      <p><strong>Results Summary:</strong><br>
-      Data Analyst, Python, SQL & Remote roles topped the list. Most jobs had salaries ranging from $50K–$65K when available.</p>
-      <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/ghostjobs/january-2025-60k-jobs-indeed" target="_blank">January 2025 Indeed Listings (Kaggle)</a></p>
-      <p><strong>Notebook:</strong> <a href="https://github.com/BS-Durgirala/my-portfolio/blob/main/notebooks/P1_Jobs_Market_Trends_2025.ipynb" target="_blank">View on GitHub</a></p>
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">Pandas</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Tableau</div>
+      <div class="skill">Excel (VBA, Pivot Tables)</div>
+      <div class="skill">DBT</div>
+      <div class="skill">Apache Airflow</div>
+      <div class="skill">Google BigQuery</div>
+      <div class="skill">AWS (S3, Redshift, Quicksight)</div>
+      <div class="skill">Power Query</div>
+      <div class="skill">SharePoint</div>
+      <div class="skill">Scikit-learn</div>
+      <div class="skill">MongoDB (Basics)</div>
+      <div class="skill">GitHub</div>
+      <div class="skill">Notion</div>
     </div>
+  </section>
 
-    <div style="text-align:center">
-      <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
+  <section>
+    <h2>Certifications</h2>
+    <div class="skills">
+      <div class="skill">Microsoft Power BI Analyst (Apr 2025)</div>
+      <div class="skill">AWS Cloud Practitioner (Apr 2025)</div>
+      <div class="skill">Google Data Analytics (Mar 2025)</div>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    <p>
+      📧 bsmg2402@gmail.com | 🔗 <a href="https://www.linkedin.com/in/dbsudha" target="_blank">LinkedIn</a>
+      <br>
+      © 2025 Durgirala Bharathi Sudha
+    </p>
+    <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
+  </footer>
 </body>
 </html>
