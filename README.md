@@ -1,6 +1,6 @@
-# 📊 Sudha's Data Analyst Portfolio
+# 📊 My Portfolio
 
-Hi! I'm Sudha — a data analytics graduate passionate about turning data into stories and strategies.  
+Hi! I'm Durgirala Bharathi Sudha — a data analytics graduate passionate about turning data into stories and strategies.  
 This repository showcases my journey and growth as a data analyst.
 
 ---
