@@ -39,26 +39,38 @@
     .section {
       margin-bottom: 2.5rem;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    .experience-grid {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    ul li::before {
-      content: "✔️ ";
+    .experience-card {
+      flex: 1 1 280px;
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      background-color: #00695c;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 500;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      margin-top: 1rem;
+    .skill-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
-    .btn:hover {
-      background-color: #004d40;
+    .skill {
+      padding: 10px 16px;
+      border-radius: 20px;
+      background-color: #e0f2f1;
+      color: #00695c;
+      font-weight: bold;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .skill:hover {
+      background-color: #b2dfdb;
     }
     .project {
       background: #ffffff;
@@ -75,12 +87,26 @@
       color: #00695c;
       font-weight: bold;
     }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      background-color: #00695c;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      margin-top: 1rem;
+    }
+    .btn:hover {
+      background-color: #004d40;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="profile.png" alt="Profile" class="profile-img" />
-    <h1>Durgirala Bharathi Sudha</h1>
+    <h1>Sudha Durgirala</h1>
     <p style="text-align: center;">Data Analyst | Problem Solver | Insight Translator</p>
 
     <div class="section">
@@ -90,22 +116,34 @@
 
     <div class="section">
       <h2>Experience</h2>
-      <ul>
-        <li>Graduate Assistant – Texas State University (2024–2025)</li>
-        <li>Managed analytics for GradBulletin and built performance reports for newsletter engagement</li>
-        <li>Collaborated on web and social data strategy for the Graduate College</li>
-      </ul>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <h3>Graduate Assistant – Texas State University</h3>
+          <p>Analyzed performance metrics for GradBulletin and improved content strategies.</p>
+        </div>
+        <div class="experience-card">
+          <h3>Web Content Assistant – Graduate College</h3>
+          <p>Worked with GATO CMS to structure and maintain academic site maps.</p>
+        </div>
+        <div class="experience-card">
+          <h3>Social Analytics Intern – Grad Communications</h3>
+          <p>Evaluated reach and engagement across Instagram, Twitter, Facebook, and LinkedIn.</p>
+        </div>
+      </div>
     </div>
 
     <div class="section">
       <h2>Skills</h2>
-      <ul>
-        <li>Python (Pandas, Seaborn, Matplotlib)</li>
-        <li>SQL & Excel</li>
-        <li>Power BI & Tableau</li>
-        <li>Web scraping, APIs, JSON handling</li>
-        <li>GitHub & Google Colab</li>
-      </ul>
+      <div class="skill-buttons">
+        <div class="skill" title="Data manipulation and analysis">Python (Pandas, Seaborn)</div>
+        <div class="skill" title="Data querying and transformation">SQL</div>
+        <div class="skill" title="Spreadsheet analysis">Excel</div>
+        <div class="skill" title="Dashboarding & BI tools">Power BI</div>
+        <div class="skill" title="Visualization & storytelling">Tableau</div>
+        <div class="skill" title="Data sourcing & integration">APIs / JSON</div>
+        <div class="skill" title="Code versioning & collaboration">GitHub</div>
+        <div class="skill" title="Browser-based coding">Google Colab</div>
+      </div>
     </div>
 
     <div class="project">
