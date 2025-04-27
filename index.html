@@ -2,168 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Durgirala Bharathi Sudha | Data Analyst Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudha | Data Analyst Portfolio</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #e8f5f9, #fdfcfc);
-      color: #2e3d49;
+      color: #1a1a1a;
+      background: linear-gradient(to bottom, #f4f9fb, #ffffff);
+      overflow-x: hidden;
     }
     header {
+      background: linear-gradient(120deg, #baeafc, #ffffff);
+      padding: 6rem 1rem 4rem;
       text-align: center;
-      padding: 3rem 1rem 2rem;
     }
     header h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       color: #004d40;
     }
     header p {
-      font-size: 1.2rem;
-      color: #555;
+      font-size: 1.3rem;
+      color: #444;
+      margin-top: 0.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #eee;
+    }
+    nav a {
+      color: #00695c;
+      text-decoration: none;
+      font-weight: 500;
     }
     section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
+      max-width: 960px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
     }
-    h2 {
-      border-bottom: 2px solid #e0f2f1;
-      padding-bottom: 0.5rem;
-      color: #00695c;
+    section h2 {
+      font-size: 2rem;
+      color: #00796b;
+      margin-bottom: 1.5rem;
     }
-    .grid {
+    .cards {
       display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
     .card {
       background: #ffffff;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     }
     .card h3 {
-      margin: 0;
-      color: #00796b;
+      font-size: 1.1rem;
+      color: #00695c;
+      margin-bottom: 0.3rem;
     }
     .card small {
-      display: block;
+      font-size: 0.85rem;
       color: #888;
-      margin-bottom: 0.5rem;
+      display: block;
+      margin-bottom: 0.8rem;
     }
     .card p {
       font-size: 0.95rem;
+      line-height: 1.5;
     }
     .skills {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 1rem;
     }
     .skill {
-      background: #d6f5f2;
+      background-color: #e1f5f2;
       color: #004d40;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-weight: 500;
-      font-size: 0.85rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
+      padding: 8px 14px;
       font-size: 0.9rem;
-      color: #777;
+      border-radius: 20px;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 10px 16px;
+    .cta {
+      text-align: center;
+      margin: 2rem auto;
+    }
+    .cta a {
       background-color: #00695c;
       color: #fff;
+      padding: 12px 20px;
       border-radius: 8px;
       text-decoration: none;
+      font-weight: 500;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Durgirala Bharathi Sudha</h1>
-    <p>Data Analyst | Python | SQL | Power BI | AWS | Excel Automation</p>
+    <h1>Sudha</h1>
+    <p>Data Analyst | Python & SQL | Dashboard Enthusiast</p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="resume.pdf" download>Resume</a>
+  </nav>
+
+  <section id="experience">
     <h2>Experience</h2>
-    <div class="grid">
+    <div class="cards">
       <div class="card">
         <h3>Graduate Assistant - Internal Funding Specialist</h3>
-        <small>Texas State University, San Marcos, TX | May 2024 – Present</small>
-        <p>Managed and analyzed 10K+ scholarship records, automated reporting using Python & VBA, and built dashboards in Power BI.</p>
+        <small>Texas State University · May 2024 – Present</small>
+        <p>Analyzed 10K+ records and automated financial dashboards using Power BI, Python, and Excel.</p>
       </div>
       <div class="card">
         <h3>Customer Insights Analyst</h3>
-        <small>Sutherland Global Services, Chennai, India | Mar 2023 – Jul 2023</small>
-        <p>Analyzed 200+ weekly inquiries using SQL & Excel, built automated service reports with Power Query & Macros.</p>
+        <small>Sutherland Global Services · Mar 2023 – Jul 2023</small>
+        <p>Led data monitoring on OTT issues using SQL and automated service reports with Power Query.</p>
       </div>
       <div class="card">
         <h3>Junior Data Analyst</h3>
-        <small>Accenture, Bengaluru, India | Oct 2021 – Nov 2022</small>
-        <p>Created 10+ Power BI dashboards, optimized SQL queries, and built automated ETL pipelines with Power Query & SharePoint.</p>
+        <small>Accenture · Oct 2021 – Nov 2022</small>
+        <p>Built dashboards, optimized queries, and created ETL pipelines across Power BI, SQL & SharePoint.</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="education">
     <h2>Education</h2>
-    <div class="grid">
+    <div class="cards">
       <div class="card">
-        <h3>MS in Data Analytics & Information Systems</h3>
-        <small>Texas State University | GPA: 3.89 | Expected May 2025</small>
-        <p>TXST Graduate Merit Fellowship Award 2023-24</p>
+        <h3>M.S. in Data Analytics & Information Systems</h3>
+        <small>Texas State University · Expected May 2025</small>
+        <p>GPA: 3.89 | TXST Graduate Merit Fellowship Award 2023–24</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
       <div class="skill">Python</div>
       <div class="skill">Pandas</div>
       <div class="skill">SQL</div>
       <div class="skill">Power BI</div>
+      <div class="skill">Excel</div>
       <div class="skill">Tableau</div>
-      <div class="skill">Excel (VBA, Pivot Tables)</div>
+      <div class="skill">VBA</div>
+      <div class="skill">Google BigQuery</div>
       <div class="skill">DBT</div>
       <div class="skill">Apache Airflow</div>
-      <div class="skill">Google BigQuery</div>
-      <div class="skill">AWS (S3, Redshift, Quicksight)</div>
       <div class="skill">Power Query</div>
       <div class="skill">SharePoint</div>
       <div class="skill">Scikit-learn</div>
+      <div class="skill">AWS</div>
       <div class="skill">MongoDB (Basics)</div>
       <div class="skill">GitHub</div>
-      <div class="skill">Notion</div>
     </div>
   </section>
 
-  <section>
-    <h2>Certifications</h2>
-    <div class="skills">
-      <div class="skill">Microsoft Power BI Analyst (Apr 2025)</div>
-      <div class="skill">AWS Cloud Practitioner (Apr 2025)</div>
-      <div class="skill">Google Data Analytics (Mar 2025)</div>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Job Market Trends (2025)</h3>
+        <small>Large JSON dataset · Kaggle</small>
+        <p>Analyzed 60K job listings using Python and Seaborn to extract job titles, skills, and salary insights.</p>
+        <p><a href="https://github.com/BS-Durgirala/my-portfolio/blob/main/notebooks/P1_Jobs_Market_Trends_2025.ipynb" target="_blank">🔗 View Notebook</a></p>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>
-      📧 bsmg2402@gmail.com | 🔗 <a href="https://www.linkedin.com/in/dbsudha" target="_blank">LinkedIn</a>
-      <br>
-      © 2025 Durgirala Bharathi Sudha
-    </p>
-    <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
-  </footer>
+  <section class="cta">
+    <a href="resume.pdf" download>📄 Download My Resume</a>
+  </section>
 </body>
 </html>
