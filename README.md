@@ -1,6 +1,4 @@
-# 📊 My Portfolio
-
-Hi! I'm Durgirala Bharathi Sudha — a data analytics graduate passionate about turning data into stories and strategies.  
+# 📊 My Work
 This repository showcases my journey and growth as a data analyst.
 
 ---
@@ -35,4 +33,4 @@ This portfolio will include projects focused on:
 
 Feel free to connect with me for collaboration or opportunities!
 
-- 📧 Email: [bharathisudha.durgi2@gmail.com](mailto:bharathisudha.durgi2@gmail.com)
+- 📧 Email: [bsmg2402@gmail.com](mailto:bsmg2402@gmail.com)
