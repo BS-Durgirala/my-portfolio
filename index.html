@@ -2,187 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Durgirala Bharathi Sudha | Data Analyst</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #fefcea, #f1f4f9);
-      color: #2c2c2c;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #101820, #f2f6fa);
+      color: #fff;
     }
-    header {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-    header img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #2c2c2c;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-
     section {
-      padding: 3rem 2rem;
-      max-width: 960px;
-      margin: auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
     }
-
-    h2 {
-      text-align: center;
-      color: #2c2c2c;
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h1, h2 {
+      color: #fff;
+    }
+    .slide h1 {
+      font-size: 2.8rem;
+    }
+    .slide h2 {
+      font-size: 2rem;
       margin-bottom: 2rem;
     }
-
-    .card-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: white;
+    .card, .project, .skills, .cert {
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 16px;
       padding: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      width: 280px;
+      margin: 1rem;
       text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      transition: transform 0.4s ease;
     }
-
-    .card h3 {
-      color: #2c2c2c;
-      margin-bottom: 0.5rem;
+    .card:hover {
+      transform: translateY(-6px);
     }
-
-    .skills {
-      text-align: center;
+    .card-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
+      gap: 2rem;
     }
-
-    .skill-tag {
-      background: #e0f7fa;
-      padding: 8px 16px;
+    .skills span {
+      background: #4dd0e1;
+      color: #000;
       border-radius: 20px;
-      color: #00796b;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    }
-
-    .project-card h3 {
-      margin-bottom: 1rem;
-      color: #2c2c2c;
-    }
-
-    .project-card p {
-      margin-bottom: 0.75rem;
-    }
-
-    .button-link {
+      padding: 8px 16px;
+      margin: 6px;
       display: inline-block;
-      margin-top: 1rem;
-      padding: 10px 20px;
-      background: #00796b;
+      font-weight: 600;
+    }
+    .cert a {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #00acc1;
       color: white;
-      text-decoration: none;
       border-radius: 8px;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: none;
-      font-size: 0.95rem;
-      color: #444;
-    }
-
-    footer a {
-      margin: 0 10px;
       text-decoration: none;
-      color: #00796b;
+      font-weight: 600;
+    }
+    .project p::after {
+      content: '|';
+      animation: typing 4s steps(40) 1, blink 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { opacity: 0 }
+    }
+    footer {
+      background: none;
+      text-align: center;
+      padding: 2rem;
+      color: #fff;
+    }
+    footer a {
+      margin: 0 1rem;
       font-size: 1.2rem;
+      color: #fff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="profile.png" alt="Profile">
+<section class="slide visible">
   <h1>Durgirala Bharathi Sudha</h1>
   <p>Data Analyst</p>
-</header>
+</section>
 
-<section>
+<section class="slide">
   <h2>Experience</h2>
-  <div class="card-grid">
+  <div class="card-container">
     <div class="card">
       <h3>Graduate Assistant</h3>
-      <p><strong>Texas State University</strong></p>
-      <p>May 2024 – Present</p>
+      <p>Texas State University</p>
+      <small>May 2024 – Present</small>
       <p>Managing internal funding records and performing data validation</p>
     </div>
     <div class="card">
       <h3>Customer Insights Analyst</h3>
-      <p><strong>Sutherland Global Services</strong></p>
-      <p>Mar 2023 – Jul 2023</p>
-      <p>Analyzed customer service inquiries to identify complaint trends</p>
+      <p>Sutherland Global Services</p>
+      <small>Mar 2023 – Jul 2023</small>
+      <p>Analyzed service inquiries to identify complaint trends</p>
     </div>
     <div class="card">
       <h3>Junior Data Analyst</h3>
-      <p><strong>Accenture</strong></p>
-      <p>Oct 2021 – Nov 2022</p>
-      <p>Developed interactive dashboards and optimized data models</p>
+      <p>Accenture</p>
+      <small>Oct 2021 – Nov 2022</small>
+      <p>Developed dashboards and optimized data models</p>
     </div>
   </div>
 </section>
 
-<section>
+<section class="slide">
   <h2>Skills</h2>
   <div class="skills">
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">SQL</span>
-    <span class="skill-tag">Excel</span>
-    <span class="skill-tag">Power BI</span>
-    <span class="skill-tag">Tableau</span>
-    <span class="skill-tag">Google Sheets</span>
-    <span class="skill-tag">Looker</span>
-    <span class="skill-tag">Power Query</span>
-    <span class="skill-tag">DBT</span>
-    <span class="skill-tag">Airflow</span>
-    <span class="skill-tag">AWS</span>
-    <span class="skill-tag">BigQuery</span>
-    <span class="skill-tag">Scikit-learn</span>
-    <span class="skill-tag">TensorFlow</span>
-    <span class="skill-tag">MongoDB</span>
-    <span class="skill-tag">Spark</span>
-    <span class="skill-tag">VBA</span>
+    <span>Python</span><span>SQL</span><span>Excel</span><span>Power BI</span><span>Tableau</span>
+    <span>Google Sheets</span><span>Looker</span><span>Power Query</span><span>DBT</span><span>Airflow</span>
+    <span>AWS</span><span>BigQuery</span><span>Scikit-learn</span><span>TensorFlow</span><span>MongoDB</span><span>Spark</span><span>VBA</span>
   </div>
 </section>
 
-<section>
+<section class="slide">
   <h2>Education</h2>
   <div class="card">
     <h3>Texas State University</h3>
@@ -191,38 +153,49 @@
   </div>
 </section>
 
-<section>
-  <h2>Certifications</h2>
-  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185520754424391680/" class="button-link" target="_blank">
-    Google Data Analytics Professional Certificate
-  </a>
+<section class="slide">
+  <h2>Certification</h2>
+  <div class="cert">
+    <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/TTK696RH5FS6" target="_blank">
+      Google Data Analytics Professional Certificate
+    </a>
+  </div>
 </section>
 
-<section>
-  <h2>Project: Job Market Trends (2025)</h2>
-  <div class="project-card">
+<section class="slide">
+  <h2>Project</h2>
+  <div class="project">
     <h3>📊 Job Market Trends (2025)</h3>
-    <p><strong>Objective:</strong> Analyze job listings from 2025 to uncover hiring trends and market insights</p>
-    <p><strong>Tools & Skills Used:</strong> Python, JSON, Pandas, Seaborn, Matplotlib</p>
-    <p><strong>Key Questions Answered:</strong></p>
-    <ul>
-      <li>What are the most common job titles?</li>
-      <li>Which companies are hiring most frequently?</li>
-      <li>What work modes dominate (Remote/Hybrid/On-Site)?</li>
-      <li>Which tech skills are most mentioned?</li>
-      <li>What do salary ranges look like?</li>
-    </ul>
-    <p><strong>Results Summary:</strong> Identified Data Analyst, BI Developer as top roles; CSM & IBM as top employers; Python & SQL most frequent skills</p>
-    <p><strong>Insights & Summary:</strong> Delivered clear visual insights for job seekers & hiring teams. Trends align with current tech demand.</p>
-    <p><strong>Data Source + Licensing:</strong> Kaggle open-source dataset from January 2025, sourced from Indeed</p>
+    <p><strong>Objective:</strong> Analyze 2025 job listings to uncover hiring patterns</p>
+    <p><strong>Tools:</strong> Python, Pandas, Seaborn, JSON</p>
+    <p><strong>Questions:</strong> Top roles? Hiring firms? Salary & remote trends?</p>
+    <p><strong>Results:</strong> Identified top titles, companies, skills & location types</p>
+    <p><strong>Insights:</strong> Cleaned, structured, and visualized 60K job records for real-world impact</p>
+    <p><strong>Source:</strong> Kaggle (2025 Job Postings)</p>
     <p><strong>Notebook:</strong> <a href="https://github.com/BS-Durgirala/my-portfolio/blob/main/notebooks/P1_Jobs_Market_Trends_2025.ipynb" target="_blank">View on GitHub</a></p>
   </div>
 </section>
 
-<footer>
-  <p>📧 <a href="mailto:bsmg2402@gmail.com">bsmg2402@gmail.com</a></p>
-  <p>🔗 <a href="https://www.linkedin.com/in/dbsudha" target="_blank">LinkedIn</a></p>
-  <p>📄 <a href="resume.pdf" target="_blank">View Resume</a></p>
+<footer class="slide">
+  <p><a href="mailto:bsmg2402@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+     <a href="https://www.linkedin.com/in/dbsudha" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+     <a href="resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a></p>
 </footer>
+
+<script>
+  const sections = document.querySelectorAll('.slide');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
 </body>
 </html>
