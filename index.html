@@ -11,30 +11,40 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #e0f7fa, #fce4ec);
       color: #2c3e50;
-      text-align: center;
     }
     .container {
-      max-width: 700px;
-      margin: 4rem auto;
+      max-width: 900px;
+      margin: 3rem auto;
       padding: 2rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
     .profile-img {
       width: 140px;
       height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin: 0 auto 1rem auto;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+    h1, h2 {
+      text-align: center;
+      color: #00695c;
     }
-    p {
-      font-size: 1.1rem;
-      max-width: 90%;
-      margin: 0 auto 2rem auto;
-      color: #555;
+    p, li {
+      color: #444;
+      font-size: 1rem;
+    }
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "✔️ ";
     }
     .btn {
       display: inline-block;
@@ -45,7 +55,7 @@
       border-radius: 8px;
       font-weight: 500;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease;
+      margin-top: 1rem;
     }
     .btn:hover {
       background-color: #004d40;
@@ -70,15 +80,37 @@
 <body>
   <div class="container">
     <img src="profile.png" alt="Profile" class="profile-img" />
-    <h1>Welcome to My Data Analyst Portfolio</h1>
-    <p>
-      This site is currently under development and will soon feature a collection of real-world data analytics projects, interactive dashboards, and insights showcasing my skills in Python, SQL, Power BI, and more. Stay tuned!
-    </p>
-    <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
+    <h1>Durgirala Bharathi Sudha</h1>
+    <p style="text-align: center;">Data Analyst | Problem Solver | Insight Translator</p>
+
+    <div class="section">
+      <h2>About Me</h2>
+      <p>I recently earned my Master's in Data Analytics & Information Systems from Texas State University and am passionate about turning data into actionable insights. I bring a blend of analytical skills, storytelling, and dashboard design to every project I take on.</p>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <ul>
+        <li>Graduate Assistant – Texas State University (2024–2025)</li>
+        <li>Managed analytics for GradBulletin and built performance reports for newsletter engagement</li>
+        <li>Collaborated on web and social data strategy for the Graduate College</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python (Pandas, Seaborn, Matplotlib)</li>
+        <li>SQL & Excel</li>
+        <li>Power BI & Tableau</li>
+        <li>Web scraping, APIs, JSON handling</li>
+        <li>GitHub & Google Colab</li>
+      </ul>
+    </div>
 
     <div class="project">
       <h2>📊 Job Market Trends (2025)</h2>
-      <p><strong>Objective:</strong> Analyze 60K+ job listings to extract insights about top job roles, hiring companies, work types, skills, and salary trends.</p>
+      <p><strong>Objective:</strong> Analyze 60K+ job listings to extract insights about top job roles, hiring companies, work types, skills, and salary trends using real-world data.</p>
       <p><strong>Skills:</strong> Python, Pandas, Seaborn, JSON flattening, NLP, EDA</p>
       <p><strong>Key Questions Answered:</strong>
         <ul>
@@ -93,6 +125,10 @@
       Data Analyst, Python, SQL & Remote roles topped the list. Most jobs had salaries ranging from $50K–$65K when available.</p>
       <p><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/ghostjobs/january-2025-60k-jobs-indeed" target="_blank">January 2025 Indeed Listings (Kaggle)</a></p>
       <p><strong>Notebook:</strong> <a href="https://github.com/BS-Durgirala/my-portfolio/blob/main/notebooks/P1_Jobs_Market_Trends_2025.ipynb" target="_blank">View on GitHub</a></p>
+    </div>
+
+    <div style="text-align:center">
+      <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
     </div>
   </div>
 </body>
