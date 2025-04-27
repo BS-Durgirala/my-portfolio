@@ -1,75 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sudha | Data Analyst Portfolio</title>
+  <title>Durgirala Bharathi Sudha | Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      color: #1a1a1a;
-      background: linear-gradient(to bottom, #f4f9fb, #ffffff);
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      color: #2d2d2d;
       overflow-x: hidden;
     }
     header {
-      background: linear-gradient(120deg, #baeafc, #ffffff);
-      padding: 6rem 1rem 4rem;
+      height: 100vh;
+      background: linear-gradient(to right, #f8f9fa, #e2f1f8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
+      padding: 2rem;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
     }
     header h1 {
-      font-size: 3rem;
-      color: #004d40;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #00796b;
     }
     header p {
-      font-size: 1.3rem;
-      color: #444;
+      font-size: 1.2rem;
       margin-top: 0.5rem;
     }
     nav {
+      position: sticky;
+      top: 0;
+      background: white;
       display: flex;
       justify-content: center;
       gap: 2rem;
       padding: 1rem;
-      background-color: #ffffff;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid #eee;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     nav a {
-      color: #00695c;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      color: #00796b;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #004d40;
     }
     section {
-      max-width: 960px;
-      margin: 4rem auto;
-      padding: 0 1.5rem;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    section h2 {
+    h2 {
       font-size: 2rem;
+      margin-bottom: 2rem;
       color: #00796b;
-      margin-bottom: 1.5rem;
     }
     .cards {
       display: grid;
-      gap: 2rem;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
     .card {
-      background: #ffffff;
-      border-radius: 14px;
+      background: white;
       padding: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card h3 {
       font-size: 1.1rem;
-      color: #00695c;
+      color: #004d40;
       margin-bottom: 0.3rem;
     }
     .card small {
@@ -80,7 +100,7 @@
     }
     .card p {
       font-size: 0.95rem;
-      line-height: 1.5;
+      line-height: 1.4;
     }
     .skills {
       display: flex;
@@ -88,39 +108,46 @@
       gap: 10px;
     }
     .skill {
-      background-color: #e1f5f2;
-      color: #004d40;
+      background: #e0f2f1;
       padding: 8px 14px;
-      font-size: 0.9rem;
       border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #00695c;
     }
     .cta {
       text-align: center;
-      margin: 2rem auto;
+      margin-top: 3rem;
     }
     .cta a {
-      background-color: #00695c;
-      color: #fff;
+      background: #00796b;
+      color: white;
       padding: 12px 20px;
-      border-radius: 8px;
       text-decoration: none;
-      font-weight: 500;
+      border-radius: 8px;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sudha</h1>
-    <p>Data Analyst | Python & SQL | Dashboard Enthusiast</p>
+    <img src="profile.png" alt="Profile">
+    <h1>Durgirala Bharathi Sudha</h1>
+    <p>Data Analyst • Python • SQL • Power BI • Excel Automation</p>
   </header>
 
   <nav>
+    <a href="#about">About</a>
     <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="resume.pdf" download>Resume</a>
   </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a data analyst passionate about converting real-world problems into actionable data stories. With a Master’s degree in Data Analytics & Information Systems and certifications in Power BI, AWS, and Google Analytics, I bring a powerful combination of business context and technical depth.</p>
+  </section>
 
   <section id="experience">
     <h2>Experience</h2>
@@ -128,51 +155,18 @@
       <div class="card">
         <h3>Graduate Assistant - Internal Funding Specialist</h3>
         <small>Texas State University · May 2024 – Present</small>
-        <p>Analyzed 10K+ records and automated financial dashboards using Power BI, Python, and Excel.</p>
+        <p>Automated dashboards and analyzed 10K+ funding records using Python, Excel, and Power BI.</p>
       </div>
       <div class="card">
         <h3>Customer Insights Analyst</h3>
-        <small>Sutherland Global Services · Mar 2023 – Jul 2023</small>
-        <p>Led data monitoring on OTT issues using SQL and automated service reports with Power Query.</p>
+        <small>Sutherland Global · Mar 2023 – Jul 2023</small>
+        <p>Monitored 200+ weekly inquiries using SQL and automated trend reports with Excel Macros.</p>
       </div>
       <div class="card">
         <h3>Junior Data Analyst</h3>
         <small>Accenture · Oct 2021 – Nov 2022</small>
-        <p>Built dashboards, optimized queries, and created ETL pipelines across Power BI, SQL & SharePoint.</p>
+        <p>Developed Power BI dashboards, streamlined SQL logic, and integrated SharePoint data flows.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>M.S. in Data Analytics & Information Systems</h3>
-        <small>Texas State University · Expected May 2025</small>
-        <p>GPA: 3.89 | TXST Graduate Merit Fellowship Award 2023–24</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Python</div>
-      <div class="skill">Pandas</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">Excel</div>
-      <div class="skill">Tableau</div>
-      <div class="skill">VBA</div>
-      <div class="skill">Google BigQuery</div>
-      <div class="skill">DBT</div>
-      <div class="skill">Apache Airflow</div>
-      <div class="skill">Power Query</div>
-      <div class="skill">SharePoint</div>
-      <div class="skill">Scikit-learn</div>
-      <div class="skill">AWS</div>
-      <div class="skill">MongoDB (Basics)</div>
-      <div class="skill">GitHub</div>
     </div>
   </section>
 
@@ -181,10 +175,30 @@
     <div class="cards">
       <div class="card">
         <h3>Job Market Trends (2025)</h3>
-        <small>Large JSON dataset · Kaggle</small>
-        <p>Analyzed 60K job listings using Python and Seaborn to extract job titles, skills, and salary insights.</p>
+        <small>Real dataset • JSON • Python</small>
+        <p>Analyzed 60K+ job listings from 2025 to identify hiring trends, skill demands, and remote work growth.</p>
         <p><a href="https://github.com/BS-Durgirala/my-portfolio/blob/main/notebooks/P1_Jobs_Market_Trends_2025.ipynb" target="_blank">🔗 View Notebook</a></p>
       </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Excel (VBA)</div>
+      <div class="skill">Pandas</div>
+      <div class="skill">Seaborn</div>
+      <div class="skill">Tableau</div>
+      <div class="skill">AWS</div>
+      <div class="skill">Apache Airflow</div>
+      <div class="skill">DBT</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Scikit-learn</div>
+      <div class="skill">Power Query</div>
+      <div class="skill">Google BigQuery</div>
     </div>
   </section>
 
